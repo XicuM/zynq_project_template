@@ -1,0 +1,6 @@
+.Xil
+project/
+*.log
+__pycache__/
+.sim/
+*.None

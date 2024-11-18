@@ -1,0 +1,40 @@
+{
+    "tasks": [
+        {
+            "label": "Create Vivado Project",
+            "type": "shell",
+            "command": "vivado",
+            "args": [
+                "-mode",
+                "batch",
+                "-source",
+                "${workspaceFolder}/scripts/create_project.tcl",
+                "-log",
+                "-nojournal"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "detail": "Creates the Vivado project using the provided TCL script"
+        },
+        {
+            "label": "Generate bitstream",
+            "type": "shell",
+            "command": "vivado",
+            "args": [
+                "-mode",
+                "batch",
+                "-source",
+                "${workspaceFolder}/scripts/bitstream.tcl",
+                "-nolog",
+                "-nojournal"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "detail": "Generates the bitstream using Vivado"
+        }
+    ]
+}
